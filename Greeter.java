@@ -13,8 +13,13 @@ public class Greeter {
 
   public String sayHello() {
     ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", locale);
+
     // 新增：将姓名转为大写
     return messages.getString("greeting") + ", " + name.toUpperCase();
+
+    // 新增：用**加粗姓名
+    return messages.getString("greeting") + ", **" + name + "**";
+
   }
 
   public static void main(String[] args) {
