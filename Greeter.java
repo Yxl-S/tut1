@@ -17,6 +17,13 @@ public class Greeter {
   }
 
   public static void main(String[] args) {
+    // 添加参数个数检查，模拟 bug 修复
+    if (args.length < 3) {
+      System.err.println("Usage: java Greeter <language> <country> <name>");
+      System.err.println("Example: java Greeter en US Alice");
+      System.exit(1);
+    }
+
     String language = args[0];
     String country = args[1];
     String name = args[2];
